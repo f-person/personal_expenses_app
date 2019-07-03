@@ -11,6 +11,10 @@ class PersonalExpensesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Personal Expenses',
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        accentColor: Colors.amber,
+      ),
       home: HomePage(),
     );
   }
@@ -76,7 +80,6 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             icon: Icon(
               Icons.add,
-              color: Colors.white,
             ),
             onPressed: () => _startAddNewTransaction(context),
           ),
