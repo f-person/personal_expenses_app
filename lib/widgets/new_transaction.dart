@@ -126,7 +126,7 @@ class _NewTransactionState extends State<NewTransaction> {
                     ),
                     FlatButton(
                       textColor: Theme.of(context).primaryColor,
-                      child: Text('Choose Date!',
+                      child: const Text('Choose Date!',
                           style: TextStyle(fontWeight: FontWeight.bold)),
                       onPressed: _presentDatePicker,
                     )
@@ -136,7 +136,7 @@ class _NewTransactionState extends State<NewTransaction> {
               Container(
                 alignment: Alignment.bottomRight,
                 child: AdaptiveFlatButton(
-                  child: Text('Choose Date'),
+                  child: const Text('Choose Date'),
                   onPressed: _presentDatePicker,
                 ),
               )

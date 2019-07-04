@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
 
     final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar(
-            middle: Text('Personal Expenses'),
+            middle: const Text('Personal Expenses'),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
             ),
           )
         : AppBar(
-            title: Text('Personal Expenses'),
+            title: const Text('Personal Expenses'),
             actions: <Widget>[
               IconButton(
                 icon: Icon(
@@ -141,7 +141,7 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('Show Chart'),
+                  const Text('Show Chart'),
                   Switch.adaptive(
                     value: _showChart,
                     onChanged: (value) {
