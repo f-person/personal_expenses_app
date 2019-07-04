@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
 
 import './models/transaction.dart';
 import './widgets/transaction_list.dart';
 import './widgets/new_transaction.dart';
 import './widgets/chart.dart';
 
-void main() => runApp(PersonalExpensesApp());
+void main() {
+  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  runApp(PersonalExpensesApp());
+}
 
 class PersonalExpensesApp extends StatelessWidget {
   @override
@@ -112,13 +116,13 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Container(
-                height: (MediaQuery.of(context).size.height * 0.4) -
+                height: (MediaQuery.of(context).size.height * 0.37) -
                     appBar.preferredSize.height -
                     MediaQuery.of(context).padding.top,
                 child: Chart(_userTransactions),
               ),
               Container(
-                height: (MediaQuery.of(context).size.height * 0.6) -
+                height: (MediaQuery.of(context).size.height * 0.676) -
                     appBar.preferredSize.height -
                     MediaQuery.of(context).padding.top,
                 child: TransactionList(_recentTransactions, _deleteTransaction),
