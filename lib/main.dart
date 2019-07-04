@@ -51,15 +51,13 @@ class _HomePageState extends State<HomePage> {
   final List<Transaction> _userTransactions = [];
   bool _showChart = false;
 
-  // TODO: fix error - Failed assertion: boolean expression must not be null
-
   List<Transaction> get _recentTransactions {
     return _userTransactions.where((transaction) {
-      if (transaction.date.isAfter(
-        DateTime.now().subtract(Duration(days: 7)),
-      )) {
-        return true;
-      }
+      return transaction.date.isAfter(
+        DateTime.now().subtract(
+          Duration(days: 7),
+        ),
+      );
     }).toList();
   }
 
